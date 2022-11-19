@@ -39,18 +39,53 @@
 # What if you want more numbers later
 # Create your own function get_int
 
+#def main():
+#    x = get_int()
+#    print(f"x is {x}")
+#
+#def get_int():
+#    while True:
+#        try:
+#            x = int(input("What's X? "))
+#        except ValueError:
+#            print("x is not an integer")
+#        else:
+#            
+#            return x
+#main()
+# above is not running and I don't know why remember to call main
+# We can remove the variable all together since it used only once 
+# Also introducing pass keyword to repeat What's x
+
+
+#def main():
+#    x = get_int()
+#    print(f"x is {x}")
+#
+#def get_int():
+#    while True:
+#        try:
+#            return int(input("What's X? "))
+#        except ValueError:
+#            pass
+#        
+#            
+#            
+#main()
+
+# Function Arguments lets make this more useable adding a parameter of prompt: we can use any name: prompt becomes a box for whats x
+
 def main():
-    x = get_int()
+    x = get_int("What's x? ")
     print(f"x is {x}")
 
-def get_int():
+def get_int(prompt):
     while True:
         try:
-            x = int(input("What's X? "))
+            return int(input(prompt))
         except ValueError:
-            print("x is not an integer")
-        else:
+            pass
+        
             
-            return x
+            
 main()
-# above is not running and I don't know why remember to call main
